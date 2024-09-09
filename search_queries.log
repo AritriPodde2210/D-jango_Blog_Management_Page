@@ -1,0 +1,16 @@
+Watching for file changes with StatReloader
+C:\Users\guddi\Desktop\D-JANGO FINAL PROJECT\blog_project\blog\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 4846
+Search query: 'aritri' by User: aritri
+"GET /search/?q=aritri HTTP/1.1" 200 3538
+Search query: 'D-jango' by User: aritri
+"GET /search/?q=D-jango HTTP/1.1" 200 3459
+"GET /search/?q= HTTP/1.1" 200 3365
+Search query: 'django' by User: aritri
+"GET /search/?q=django HTTP/1.1" 200 3371
+"GET / HTTP/1.1" 200 4846
+"POST /accounts/logout/ HTTP/1.1" 200 3407
+"GET / HTTP/1.1" 200 4407
+Search query: 'aritri' by User: Anonymous
+"GET /search/?q=aritri HTTP/1.1" 200 3389

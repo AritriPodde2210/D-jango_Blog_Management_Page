@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block title %}{{ blog.title }}{% endblock %}
+
+{% block content %}
+    <h1>{{ blog.title }}</h1>
+    <p>By {{ blog.user.username }} on {{ blog.created_at }}</p>
+    <p>{{ blog.content }}</p>  <!-- Display the blog's content -->
+
+    <a href="{% url 'blog_edit' blog.id %}" class="btn btn-warning">Edit</a>
+    <a href="{% url 'blog_delete' blog.id %}" class="btn btn-danger">Delete</a>
+    <a href="{% url 'blog_list' %}" class="btn btn-secondary">Back to Blog List</a>
+{% endblock %}

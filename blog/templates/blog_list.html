@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+My Blog
+{% endblock %}
+
+{% block content %}
+<h1 class="text-center text-white mt-4">Welcome To My Blog Project</h1>
+<a class="btn btn-primary mb-4" href="{% url 'blog_create' %}">Create a blog</a>
+<div class="container row gap-3">
+    {% for blog in blogs %}
+    <div class="card" style="width: 18rem;">
+        {% if blog.photo %}
+        <img src="{{ blog.photo.url }}" class="card-img-top" alt="Blog image">
+        {% endif %}
+        <div class="card-body">
+            <h5 class="card-title">{{ blog.user.username }}</h5>
+            <p class="card-text">{{ blog.text }}</p>
+            {%if blog.user == user%}
+            <a href="{% url 'blog_edit' blog.id %}" class="btn btn-primary">Edit</a>
+            <a href="{% url 'blog_delete' blog.id %}" class="btn btn-danger">Delete</a>
+             {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
